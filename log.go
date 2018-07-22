@@ -16,7 +16,6 @@ type TypeLogger struct {
 	LogFile *log.Logger
 }
 
-
 func NewLogger(source string) *TypeLogger {
 	var pathLogFile string
 	prod := os.Getenv("PROD")
@@ -54,4 +53,3 @@ func NewLogger(source string) *TypeLogger {
 
 	return l
 }
-

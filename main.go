@@ -9,7 +9,7 @@ import (
 
 type Data struct {
 	Location    string `json:"location"`
-	IdI         string `json:"id_i"`
+	IdI         string `json:"idi"`
 	Description string `json:"description"`
 	ImageURL    string `json:"image_source"`
 	ImageLink   string `json:"image_link"`
@@ -34,11 +34,10 @@ func main() {
 			fmt.Println(err)
 		}
 
-		c.String(200, "Success")
-
 		slackService.PostMessage(data)
 
+		c.String(200, "Success")
 	})
 
-	router.Run(fmt.Sprintf("https://%s:%s", slackService.Port, slackService.Host))
+	router.Run(fmt.Sprintf("http://%s:%s", slackService.Port, slackService.Host))
 }

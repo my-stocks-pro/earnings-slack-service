@@ -19,7 +19,7 @@ func (s *TypeSlackService) LoadConfig() *TypeConfig {
 
 	conf := &TypeConfig{}
 
-	data, errReadFile := ioutil.ReadFile("config/approved-service.yaml")
+	data, errReadFile := ioutil.ReadFile("config/earnings-service.yaml")
 	if errReadFile != nil {
 		log.Fatalf("error: %v", errReadFile)
 	}
