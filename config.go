@@ -29,6 +29,7 @@ func (s *TypeSlackService) LoadConfig() *TypeConfig {
 		log.Fatalf("error: %v", errYaml)
 	}
 
+	s.Logger.Info.Println("Load Config...")
 	return conf
 
 }
@@ -38,5 +39,8 @@ func (s *TypeSlackService) GetSevicePath() (string, string) {
 	if prod == "1" {
 		return s.Config.Hostprod, s.Config.Port
 	}
+
+	s.Logger.Info.Println("Load SevicePath...")
+
 	return "127.0.0.1", s.Config.Port
 }
