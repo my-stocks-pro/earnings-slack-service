@@ -1,0 +1,5 @@
+token:
+channel: shutterstock
+host: 127.0.0.1
+hostprod: earnings-slack-service
+port: 8003
